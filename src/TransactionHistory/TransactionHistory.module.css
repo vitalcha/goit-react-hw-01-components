@@ -1,0 +1,13 @@
+.main__tab {
+  text-align: center;
+  margin: 0 auto;
+  width: 300px;
+  border: 2px solid rgb(214, 211, 211);
+}
+.main__cont {
+  color: black;
+  background: rgb(34, 187, 214);
+}
+.main__line tr:nth-of-type(2n) {
+  background-color: rgb(210, 255, 225);
+}

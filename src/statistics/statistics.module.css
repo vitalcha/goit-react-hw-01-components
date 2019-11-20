@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  /* margin: 0; */
+}
+
+.statistics {
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+}
+
+.stat__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  width: 70px;
+  padding: 12px;
+  border: 1px solid #b8b5b5;
+  background-color: rgb(94, 209, 255);
+  
+}
+
+.percentage {
+  margin: 10px;
+}
+
+
+
+.item:nth-last-of-type(2n){
+  background-color:red;
+}
+.item:hover {
+  background-color: rgba(231, 199, 15, 0.945);
+}
