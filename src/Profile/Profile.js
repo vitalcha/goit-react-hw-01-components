@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import s from "./index.module.css";
 
-const Header = ({ user }) => {
+const Profile = ({ user }) => {
   return (
     <header>
       <div className={s.profile}>
-        {console.log(user)}
+        {/* {console.log(user)} */}
         <div className={s.description}>
           <img src={user.avatar} alt="user avatar" className={s.avatar} />
           <p className={s.name}>{user.name}</p>
@@ -32,4 +33,17 @@ const Header = ({ user }) => {
   );
 };
 
-export default Header;
+Profile.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
+export default Profile;
